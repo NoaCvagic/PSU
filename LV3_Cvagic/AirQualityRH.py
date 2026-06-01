@@ -36,3 +36,12 @@ df['dayOfweek'] = df['vrijeme'].dt.dayofweek
 
 
 print(df.sort_values(['mjerenje']).tail(3))
+
+
+#RJESENJE
+top3 = df.sort_values("mjerenje",
+                      ascending=False).head(3)
+
+print("Tri najvece koncentracije PM10:")
+
+print(top3[["vrijeme", "mjerenje"]])
